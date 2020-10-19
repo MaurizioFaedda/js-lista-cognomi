@@ -4,6 +4,7 @@ h1 {
 
 span {
     color: #fff;
+    font-size: 24px;
 }
 
 #effetto {
@@ -12,8 +13,26 @@ span {
     position: relative;
 }
 
-.effetto-cognomi .effetto-span {
-    animation: salita 4s linear infinite;
+.effetto-cognomi #cognome-0 {
+    animation: salita 3s linear forwards;
+}
+.effetto-cognomi #cognome-1 {
+    animation: salita 3.2s linear forwards;
+}
+.effetto-cognomi #cognome-2 {
+    animation: salita 3.4s linear forwards;
+}
+.effetto-cognomi #cognome-3 {
+    animation: salita 3.6s linear forwards;
+}
+.effetto-cognomi #cognome-4 {
+    animation: salita 3.8s linear forwards;
+}
+.effetto-cognomi #cognome-5 {
+    animation: salita 4s linear forwards;
+}
+.effetto-cognomi #cognome-6 {
+    animation: salita 4.2s linear forwards;
 }
 
 .effetto-cognomi {
@@ -32,14 +51,11 @@ span {
         opacity: 0;
     }
     50%{
-        opacity: 1;
-    }
-    70%{
-        opacity: 1;
+        opacity: 0.50;
     }
     100%{
         transform: translateY(-80vh);
-        opacity: 0;
+        opacity: 1;
     }
 
 }
