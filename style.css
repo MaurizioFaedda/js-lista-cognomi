@@ -1,0 +1,45 @@
+h1 {
+    color: #fff;
+}
+
+span {
+    color: #fff;
+}
+
+#effetto {
+    height: 100vh;
+    background-color: #cd6767;
+    position: relative;
+}
+
+.effetto-cognomi .effetto-span {
+    animation: salita 4s linear infinite;
+}
+
+.effetto-cognomi {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+}
+
+@keyframes salita{
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-80vh);
+        opacity: 0;
+    }
+
+}
