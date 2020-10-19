@@ -27,25 +27,25 @@ cognomi.sort();
 // console.log(cognomi);
 
 // Dichiaro la mia variabile per indicare la posizione
-// var posizione = cognomi.indexOf(cognomeUtente) + 1;
+var posizione = cognomi.indexOf(cognomeUtente) + 1;
 
 // Ciclo in caso di cognomi uguali. All'utente viene indicato il numero delle persone con il suo stesso cognome
-// var contatoreCognomeUtente = -1;
-// var stessoCognome;
-// for (var i = 0; i < cognomi.length; i++) {
-//     if (cognomeUtente == cognomi[i]) {
-//         contatoreCognomeUtente += 1;
+var contatoreCognomeUtente = -1;
+var stessoCognome;
+for (var i = 0; i < cognomi.length; i++) {
+    if (cognomeUtente == cognomi[i]) {
+        contatoreCognomeUtente += 1;
+
+    }
+}
 //
-//     }
-// }
-// //
-// if (contatoreCognomeUtente < 1 ) {
-//     console.log("L'utente " + cognomeUtente + " è alla " + posizione + "° posizione");
-// } else if (contatoreCognomeUtente == 1) {
-//     console.log("L'utente " + cognomeUtente + " è alla " + posizione + "° posizione con un altro utente con lo stesso cognome.");
-// } else {
-//     console.log("L'utente " + cognomeUtente + " è alla " + posizione + "° posizione con altri " + contatoreCognomeUtente + " utenti con lo stesso cognome.");
-// }
+if (contatoreCognomeUtente < 1 ) {
+    document.getElementById("comunicazione").innerHTML = ("L'utente " + cognomeUtente + " è alla " + posizione + "° posizione");
+} else if (contatoreCognomeUtente == 1) {
+    document.getElementById("comunicazione").innerHTML = ("L'utente " + cognomeUtente + " è alla " + posizione + "° posizione con un altro utente con lo stesso cognome.");
+} else {
+    document.getElementById("comunicazione").innerHTML = ("L'utente " + cognomeUtente + " è alla " + posizione + "° posizione con altri " + contatoreCognomeUtente + " utenti con lo stesso cognome.");
+}
 
 for (var i = 0; i < cognomi.length; i++) {
     document.getElementById("cognome-" + i).innerHTML = cognomi[i];
