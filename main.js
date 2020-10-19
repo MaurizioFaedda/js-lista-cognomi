@@ -8,6 +8,10 @@ var cognomi = ["Rossi", "Verdi", "Ricci", "Bianchi", "Ferrari"];
 // L'utente inserisce il suo cognome
 var cognomeUtente = prompt("Inserirsci il tuo cognome");
 
+// anche se l'utente inserirà la prima lettera minuscola del suo cognome, questo verrà inserito
+// con la lettere maiuscola in modo che non finsica all'ultima posizione.
+cognomeUtente = cognomeUtente.charAt(0).toUpperCase() + cognomeUtente.slice(1)
+
 // Inserisco il cognome dell'utente dentro l'array
 cognomi.push(cognomeUtente);
 
