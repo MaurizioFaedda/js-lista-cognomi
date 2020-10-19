@@ -37,7 +37,7 @@ for (var i = 0; i < cognomi.length; i++) {
     }
 }
 
-if (contatoreCognomeUtente < 0 ) {
+if (contatoreCognomeUtente < 1 ) {
     console.log("L'utente " + cognomeUtente + " è alla " + posizione + "° posizione");
 } else if (contatoreCognomeUtente == 1) {
     console.log("L'utente " + cognomeUtente + " è alla " + posizione + "° posizione con un altro utente con lo stesso cognome.");
