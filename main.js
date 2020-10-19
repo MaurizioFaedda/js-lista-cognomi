@@ -3,7 +3,7 @@
 // Stampare la lista dei cognomi in ordine alfabetico e comunicare all'utente la posizione in cui si trova il suo cognome (dopo averlo riordinato).
 
 // Creo il mio Array in ordine causale
-var cognomi = ["Rossi", "Verdi", "Ricci", "Bianchi", "Ferrari"];
+var cognomi = ["Rossi", "Verdi", "Rossi", "Ricci", "Bianchi", "Ferrari"];
 
 // L'utente inserisce il suo cognome
 var cognomeUtente = prompt("Inserirsci il tuo cognome");
@@ -27,5 +27,21 @@ console.log(cognomi);
 // Dichiaro la mia variabile per indicare la posizione
 var posizione = cognomi.indexOf(cognomeUtente) + 1;
 
-// Stampo la posizione dell'utente
-console.log("L'utente " + cognomeUtente + " è alla " + posizione + "° posizione");
+// Ciclo in caso di cognomi uguali. All'utente viene indicato il numero delle persone con il suo stesso cognome
+var contatoreCognomeUtente = -1;
+var stessoCognome;
+for (var i = 0; i < cognomi.length; i++) {
+    if (cognomeUtente == cognomi[i]) {
+        contatoreCognomeUtente += 1;
+
+    }
+}
+
+if (contatoreCognomeUtente < 1 ) {
+    console.log("L'utente " + cognomeUtente + " è alla " + posizione + "° posizione");
+} else if (contatoreCognomeUtente = 1) {
+    console.log("L'utente " + cognomeUtente + " è alla " + posizione + "° posizione con un altro utente con lo stesso cognome.");
+} else {
+    console.log("L'utente " + cognomeUtente + " è alla " + posizione + "° posizione con altri " + contatoreCognomeUtente + " utenti con lo stesso cognome.");
+
+}
